@@ -9,7 +9,7 @@ resource "aws_iam_role" "ec2_role" {
                     Principal = {
                         Service="ec2.amazonaws.com"
                     }
-                    Action = "sts:assumeRole"
+                    Action = "sts:AssumeRole"
                 }
             ]
 
