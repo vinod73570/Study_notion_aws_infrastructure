@@ -1,0 +1,78 @@
+# =========================
+# Terraform
+# =========================
+
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Terraform variable files that may contain secrets
+*.tfvars
+*.tfvars.json
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+crash.log
+
+
+####################################
+# Terraform
+####################################
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Terraform variable files (may contain secrets)
+*.tfvars
+*.tfvars.json
+
+# Terraform CLI config files
+.terraformrc
+terraform.rc
+
+# (Optional) Ignore lock file if working solo
+.terraform.lock.hcl
+
+
+####################################
+# AWS
+####################################
+.aws/
+*.pem
+*.key
+
+
+####################################
+# Logs
+####################################
+*.log
+
+
+####################################
+# OS / Editor
+####################################
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+
+####################################
+# Archives / binaries
+####################################
+*.exe
+*.zip
+*.tar
+*.tar.gz
