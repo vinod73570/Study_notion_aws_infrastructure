@@ -3,7 +3,7 @@ data "terraform_remote_state" "networking"{
     config = {
       bucket = "study-notion-terraform-state-vinodjat"
       key = "v1-networking/terraform.tfstate"
-      region = var.aws_region
+      region = "ap-south-1"
     }
 
 }
