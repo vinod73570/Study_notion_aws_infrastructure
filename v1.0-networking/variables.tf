@@ -27,7 +27,7 @@ variable "availability_zones" {
     type = list(string)
   
 }
-# variable "env" {
-#     description = "Deployment environment (e.g., dev, prod)"
-#     type = string
-# }
+variable "environment" {
+    description = "Deployment environment (e.g., dev, prod)"
+    type = string
+}
