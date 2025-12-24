@@ -6,3 +6,6 @@ locals {
     idx => subnet_id
   }
 }
+
+
+

@@ -40,7 +40,8 @@ resource "aws_iam_policy" "ec2_policy" {
             Action = [
                 "logs:CreateLogGroup",
                 "logs:CreateLogStream",
-                "logs:PutLogEvents"
+                "logs:PutLogEvents",
+                "ssm:UpdateInstanceInformation"
             ]
             Resource="*"
         }
@@ -49,6 +50,10 @@ resource "aws_iam_policy" "ec2_policy" {
     })
 }
 
+resource "aws_iam_role_policy_attachment" "ec2_ssm_attach" {
+  role       = aws_iam_role.ec2_role.name
+  policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
+}
 
 resource "aws_iam_role_policy_attachment" "ec2_attach" {
   role       = aws_iam_role.ec2_role.name
@@ -60,6 +65,7 @@ resource "aws_iam_instance_profile" "ec2_profile" {
     role = aws_iam_role.ec2_role.name
   
 }
+
 
 
 
